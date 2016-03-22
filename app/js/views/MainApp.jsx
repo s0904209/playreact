@@ -13,6 +13,7 @@ var Footer = React.createFactory( require('./Footer.jsx') );
 var InputBox = React.createFactory( require('./InputBox.jsx') );
 var List = React.createFactory( require('./List.jsx') );
 var Detail = React.createFactory( require('./Detail.jsx') );
+var MyQuill = React.createFactory( require('./myquill.jsx') );
 
 var TodoStore = require('../stores/TodoStore');
 var AppConstants = require('../constants/AppConstants');
@@ -136,48 +137,6 @@ var MainApp = React.createClass({
      * 
      */
     render: function() {
-
-        var size = this.state.screenSize;
-        // console.log( 'size: ', size );
-
-        if( size == 'phone' ){
-
-            // phone
-            return (
-                
-                <div className="wrapper">
-                    
-                    <Header truth={this.state} />
-                    
-                    <div className="main-box">
-                        <InputBox truth={this.state} />
-                        <List truth={this.state} />
-                    </div>
-                    
-                    <Footer />
-                </div>    
-            )
-
-        }else if( size == 'tablet'){
-
-            // tablet
-            return (
-                
-                <div className="wrapper">
-                    
-                    <Header truth={this.state} />
-                    
-                    <div className="main-box">
-                        <InputBox truth={this.state} />
-                        <List truth={this.state} />
-                    </div>
-                    
-                    <Footer />
-                </div>    
-            )
-        
-        }else{
-            
             // desktop
             return (
                 
@@ -190,11 +149,11 @@ var MainApp = React.createClass({
                         <List truth={this.state} />
                         <Detail truth={this.state} />
                     </div>
-                    
+
+                    <MyQuill />
                     <Footer />
                 </div>    
             )
-        }
     },
 
 
