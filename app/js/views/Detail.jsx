@@ -46,7 +46,7 @@ var comp = React.createClass({
                  onChange={this.handleChange.bind(this, 'name')}
                  placeholder="Enter email" />
         </div>
-
+{/*
         <div className="form-group">
           <label htmlFor="todo-date">Created Date</label>
           <p>{ date }</p>
@@ -56,7 +56,17 @@ var comp = React.createClass({
           <label htmlFor="todo-date">ID</label>
           <p>{this.state.selectedItem.uid}</p>
         </div>
+*/}
+        <div className="form-group">
+          <label htmlFor="todo-date">Country</label>
+          <p>{this.state.selectedItem.country}</p>
+        </div>
         
+        <div className="form-group">
+          <label htmlFor="todo-date">HTML</label>
+          <p>{this.state.selectedItem.html}</p>
+        </div>
+
         <button className="btn btn-default" 
                 onClick={this.handleClick}>Save</button>
       </form>

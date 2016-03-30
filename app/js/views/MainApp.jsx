@@ -149,8 +149,9 @@ var MainApp = React.createClass({
                         <List truth={this.state} />
                         <Detail truth={this.state} />
                     </div>
-
+                {/*
                     <MyQuill />
+                */}
                     <Footer />
                 </div>    
             )
